@@ -4,10 +4,18 @@ import { useDispatch, useSelector } from 'react-redux';
 import { filterByName } from '../redux/actions';
 
 const SearchBarContainer = styled.div`
-  width: 680px;
+  width: 50%;
   padding: 20px;
+  margin-right: 10px;
   input{
     width: 100%;
+    border-style: none;
+    height: 25px;
+    border-radius: 5px;
+  }
+  @media (max-width: 800px) {
+    width: 90%;
+    margin-right: 20px;
   }
 `
 
@@ -18,10 +26,11 @@ export default function SearchBar() {
 
     function handleInputChange(e){
         const search = e.target.value
-        console.log(search)
         dispatch(filterByName(search))
-    }
-  return (
+      }
+      
+    
+      return (
     <SearchBarContainer>
       <input
           onChange={(e)=>handleInputChange(e)}

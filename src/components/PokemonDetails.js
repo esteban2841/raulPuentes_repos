@@ -5,17 +5,27 @@ import styled from 'styled-components'
 const PokemonDetailsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
     align-items: flex-start;
-    width: 40%;
+    background-color: #191c1f;
+    width: 25%;
     gap: 5px;
-    border: 1px solid black;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    p{
+        line-height: 0%;
+        padding: 0;
+    }
+    h3{
+        line-height: 0%;
+        padding: 0;
+    }
     .container{
         width: 100%;
+        padding: 10px;
     }
     .pokeImage{
-        height: 200px;
+        height: 125px;
+        
     }
     .pokemonInfo{
         display: flex;
@@ -26,6 +36,7 @@ const PokemonDetailsContainer = styled.div`
     .movements{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         gap: 10px;
         align-items: center;
         width: 100%;
@@ -40,6 +51,12 @@ const PokemonDetailsContainer = styled.div`
     .sprites{
         flex-wrap: wrap;
         width: 100%;
+    }
+    @media (max-width: 910px) {
+       width: 40%;
+    }
+    @media (max-width: 500px) {
+       width: 100%;
     }
 `
 
@@ -71,6 +88,8 @@ export default function PokemonDetails() {
                             )
                         })
                     }</div>
+                    <h3>Peso</h3>
+                    <p>{pokemon.weight}</p>
                     <h3>Sprites</h3>
                     <div className='sprites'>{
                         

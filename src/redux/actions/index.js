@@ -30,7 +30,6 @@ export const getAllPokemons =   () => async (dispatch, getState) => {
 export const getPokemonById =   (id) => async (dispatch, getState) => {
    const {pokemons} = getState()
    const pokemonFiltered = [...pokemons].find(p=> p.id == id)
-   console.log(pokemonFiltered)
    dispatch({
       type : FILTER_BY_ID,
       payload : pokemonFiltered
@@ -51,26 +50,30 @@ export const getPage = (page) => async (dispatch, getState) => {
 };
 export const filterByName = (pokemonName) => async (dispatch, getState) => {
 
-   
    dispatch({
       type : FILTER_NAME,
       payload : pokemonName
    })
-
-
+   dispatch({
+      type : PAGINATION,
+      payload : applyPagination(getState)
+   })
 };
 
-const filterText = (data, value) => {
-   console.log(value, "action value filter")
+const filterText =  (data, value) => {
+   console.log(value, data, "action value filter")
+   const pokeFiltered = [...data].filter(pokemon=>{
+      return pokemon.name.includes(value)
+   })
    if( value === "") return data
-   return [...data].filter(p=> p.name === value)
+   else return pokeFiltered
 }
 
 
 function applyPagination(getState){
-
-   const { pagination:page, pokemons: data, filter} = getState()
-
+   const { filter } = getState()
+   const { pagination:page, pokemons: data } = getState()
+   console.log(filter, "desde apply pagination")
    let pokemones = [...data]
    
    pokemones = filterText(pokemones, filter)

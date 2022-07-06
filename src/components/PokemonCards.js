@@ -7,10 +7,8 @@ const StyledContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 60%;
+    width: 65%;
     gap: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
     
     .cardContainer{
       display: flex;
@@ -19,12 +17,47 @@ const StyledContainer = styled.div`
       align-items: center;
       width: 350px;
       height: 250px;
-      border: 1px solid black;
+      background-color: #191c1f;
+      border: 1px solid #ffffff;
       border-radius: 10px;
       padding: 10px;
     }
+    .cardContainer:hover .pokeImage{
+        
+        transform: scale(1.1);
+        
+    }
     img{
       height: 150px;
+    }
+    @media (max-width: 1230px) {
+       .cardContainer{
+        width: 300px;
+        height: 250px;
+       }   
+    }
+    @media (max-width: 1100px) {
+       .cardContainer{
+        width: 250px;
+        height: 200px;
+       }  
+       img{
+        height: 100px;
+        } 
+    }
+    @media (max-width: 910px) {
+       width: 50%;
+    }
+    @media (max-width: 500px) {
+       width: 100%;
+
+       .cardContainer{
+        width: 95%;
+        height: 200px;
+       }  
+       img{
+        height: 100px;
+        } 
     }
 `
 
@@ -51,7 +84,7 @@ export default function PokemonCards() {
               return(
 
                 <div id={pokemon.id} className='cardContainer' key={pokemon.id} onClick={handleClick}>
-                  <img src={pokemon.img} alt=''/>
+                  <img className="pokeImage"src={pokemon.img} alt=''/>
                   <p>#{`${pokemon.id}`.padStart(3, 0)}</p>
                   <p>{capitalize(pokemon.name)}</p>
                 </div>

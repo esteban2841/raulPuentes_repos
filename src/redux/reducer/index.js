@@ -14,8 +14,8 @@ const initialState = {
     pokemons: [],
     pokemonsSelected: [],
     pokemonsFiltered: [],
+    pagination:1,
     filter:"",
-    pagination:1
 };
 
 const rootReducer = (state = initialState, action) => {
@@ -30,6 +30,7 @@ const rootReducer = (state = initialState, action) => {
         case NEW_PAGE:
             return { ...state, pagination : action.payload }
         case FILTER_NAME:
+            console.log(action.payload, "entro al reducer")
             return { ...state, filter : action.payload }
         
        default : return state

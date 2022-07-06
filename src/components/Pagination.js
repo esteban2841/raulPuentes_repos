@@ -5,21 +5,23 @@ import { getPage } from '../redux/actions'
 
 const PaginationContainer = styled.div`
     display: flex;
-    padding-left: 10px;
-    padding-right: 10px;
     justify-content: space-between;
-    width: 99%;
+    padding-inline: 10px;
     margin-top: 5px;
     button{
         color: white;
-        background-color: blue;
+        background-color: #191c1f;
         border-style: none;
         padding: 10px;
         border-radius: 4px;
         height: 40px;
         width: 100px;
-
+        :hover{
+            background-color: white;
+            color: #191c1f;
+        }
     }
+
     
 `
 

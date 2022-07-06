@@ -6,7 +6,16 @@ import PokemonDetails from './PokemonDetails'
 const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 98%;
+    padding: 20px;
+    gap: 20px;
+    @media (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      gap: 20px;
+    }
 `
 
 export default function MainPokemonContainer() {
