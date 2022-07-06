@@ -8,6 +8,7 @@ const PaginationContainer = styled.div`
     justify-content: space-between;
     padding-inline: 20px;
     margin-top: 5px;
+    margin-bottom: 10px;
     button{
         color: white;
         background-color: #191c1f;
