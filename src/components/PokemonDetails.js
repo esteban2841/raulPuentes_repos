@@ -20,7 +20,6 @@ const PokemonDetailsContainer = styled.div`
         padding: 0;
     }
     .container{
-        width: 100%;
         padding: 10px;
     }
     .pokeImage{
@@ -30,7 +29,6 @@ const PokemonDetailsContainer = styled.div`
     .pokemonInfo{
         display: flex;
         flex-direction: column;
-        width: 100%;
         align-items: center;
     }
     .movements{
@@ -46,11 +44,9 @@ const PokemonDetailsContainer = styled.div`
         flex-direction: row;
         gap: 5px;
         align-items: center;
-        width: 100%;
     }
     .sprites{
         flex-wrap: wrap;
-        width: 100%;
     }
     @media (max-width: 910px) {
        width: 40%;

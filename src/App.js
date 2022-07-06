@@ -8,9 +8,9 @@ const MainContainer = styled.div`
   flex-direction: column;
   background-color: #1f252b;
   color: white;
-  .pokeContainer::after{
-    content: "<Pagination/>";
-  }
+  /* .pokeContainer::after{
+    content: <Pagination/>;
+  } */
   h1{
     align-self: center;
     line-height: 0;
@@ -22,10 +22,10 @@ function App() {
    
   return (
     <MainContainer className="App">
-      <h1>Listado de pokemon</h1>
+      <h1 className="title">Listado de pokemon</h1>
       <SearchBar className="searchBar"/>
       <MainPokemonContainer className="pokeContainer" />
-      
+      <Pagination className="pagination"/>
     </MainContainer>
   );
 }

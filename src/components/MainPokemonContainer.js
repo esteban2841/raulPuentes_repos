@@ -7,7 +7,7 @@ const MainContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 98%;
+    width: 96%;
     padding: 20px;
     gap: 20px;
     @media (max-width: 500px) {
