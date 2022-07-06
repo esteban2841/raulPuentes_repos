@@ -13,7 +13,7 @@ const MainContainer = styled.div`
     @media (max-width: 500px) {
       display: flex;
       flex-direction: column;
-      width: 90%;
+      width: 100%;
       gap: 20px;
     }
 `

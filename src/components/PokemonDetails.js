@@ -23,7 +23,7 @@ const PokemonDetailsContainer = styled.div`
         width: 100%;
     }
     .pokeImage{
-        height: 125px;
+        height: 190px;
         
     }
     .pokemonInfo{
@@ -95,7 +95,7 @@ export default function PokemonDetails() {
                             )
                         })
                     }</div>
-                    <h3>Movements</h3>
+                    <h3>Movimientos</h3>
                     <div className='movements'>{
                         
                         pokemon.movements && pokemon.movements.map(m=>{

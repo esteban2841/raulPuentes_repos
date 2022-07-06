@@ -16,7 +16,7 @@ const SearchBarContainer = styled.div`
     border-radius: 5px;
   }
   @media (max-width: 800px) {
-    width: 90%;
+    width: 100%;
     margin-right: 20px;
   }
 `
