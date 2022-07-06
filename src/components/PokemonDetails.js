@@ -7,20 +7,20 @@ const PokemonDetailsContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     background-color: #191c1f;
-    width: 25%;
+    width: 30%;
     gap: 5px;
     border: 1px solid #ffffff;
     border-radius: 10px;
     p{
-        line-height: 0%;
         padding: 0;
     }
     h3{
-        line-height: 0%;
         padding: 0;
     }
     .container{
         padding: 10px;
+        height: 100%;
+        width: 100%;
     }
     .pokeImage{
         height: 125px;

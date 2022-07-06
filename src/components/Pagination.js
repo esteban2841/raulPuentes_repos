@@ -6,7 +6,7 @@ import { getPage } from '../redux/actions'
 const PaginationContainer = styled.div`
     display: flex;
     justify-content: space-between;
-    padding-inline: 10px;
+    padding-inline: 20px;
     margin-top: 5px;
     button{
         color: white;

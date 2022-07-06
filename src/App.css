@@ -1,14 +1,19 @@
-*{
+body,html{
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+  min-height: 100vh;
+  background: #1f252b;
+  
 }
 body{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #fcfcfd;
+  color: white;
+}
+
+*{
   margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }

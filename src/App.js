@@ -2,12 +2,16 @@ import MainPokemonContainer from "./components/MainPokemonContainer"
 import SearchBar from "./components/SearchBar";
 import styled from "styled-components";
 import Pagination from "./components/Pagination";
+import './App.css';
 
 const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #1f252b;
   color: white;
+  gap: 10px;
+  max-width: 1500px;
+
   /* .pokeContainer::after{
     content: <Pagination/>;
   } */

@@ -5,7 +5,9 @@ import { filterByName } from '../redux/actions';
 
 const SearchBarContainer = styled.div`
   width: 50%;
-  padding: 20px;
+  padding-inline: 20px;
+  margin: 0;
+  margin-top: 10px;
   margin-right: 10px;
   input{
     width: 100%;
