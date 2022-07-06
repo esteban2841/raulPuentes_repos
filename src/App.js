@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import MainPokemonContainer from "./components/MainPokemonContainer"
+import SearchBar from "./components/SearchBar";
+import styled from "styled-components";
 
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h2{
+    align-self: center;
+  }
+  
+`
 function App() {
+   
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer className="App">
+      <h2>Listado de pokemon</h2>
+      <SearchBar className="searchBar"/>
+      <MainPokemonContainer/>
+    </MainContainer>
   );
 }
 
