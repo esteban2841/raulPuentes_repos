@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { useDispatch, useSelector } from 'react-redux';
+import { filterByName } from '../redux/actions';
 
 const SearchBarContainer = styled.div`
   width: 680px;
@@ -11,10 +13,13 @@ const SearchBarContainer = styled.div`
 
 export default function SearchBar() {
     const [searchInput, setSearchInput] = useState("")
+    const dispatch = useDispatch()
+
 
     function handleInputChange(e){
         const search = e.target.value
-        setSearchInput(search)
+        console.log(search)
+        dispatch(filterByName(search))
     }
   return (
     <SearchBarContainer>

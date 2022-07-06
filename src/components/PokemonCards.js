@@ -8,7 +8,7 @@ const StyledContainer = styled.div`
     flex-wrap: wrap;
     flex-direction: row;
     width: 60%;
-    gap: 40px;
+    gap: 20px;
     padding-left: 10px;
     padding-right: 10px;
     
@@ -17,14 +17,14 @@ const StyledContainer = styled.div`
       flex-direction: column;
       gap:5px;
       align-items: center;
-      width: 300px;
-      height: 350px;
+      width: 350px;
+      height: 250px;
       border: 1px solid black;
       border-radius: 10px;
       padding: 10px;
     }
     img{
-      height: 200px;
+      height: 150px;
     }
 `
 
@@ -36,7 +36,7 @@ export default function PokemonCards() {
       dispatch(getAllPokemons())
     },[])
 
-    const pokemons = useSelector(state=> state.pokemons)
+    const pokemons = useSelector(state=> state.pokemonsFiltered)
 
     const handleClick = (event)=>{
       const pokemonSelected = event.currentTarget.id
