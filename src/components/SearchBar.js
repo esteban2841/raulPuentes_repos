@@ -27,7 +27,7 @@ export default function SearchBar() {
 
 
     function handleInputChange(e){
-        const search = e.target.value
+        const search = e.target.value.toLowerCase()
         dispatch(filterByName(search))
       }
       
